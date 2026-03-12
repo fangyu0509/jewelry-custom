@@ -1,13 +1,13 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
     name: jewelry-custom
   datasource:
-    url: jdbc:mysql://localhost:3306/jewelry_custom?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/jewelry_custom?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
-    password: ${DB_PASSWORD:root123}
+    password: ${DB_PASSWORD:Jewelry2026@Secure}
     driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
     host: localhost

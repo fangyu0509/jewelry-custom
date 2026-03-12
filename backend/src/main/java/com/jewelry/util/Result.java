@@ -1,16 +1,32 @@
 package com.jewelry.util;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 /**
  * 统一响应结果
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Result<T> {
     
     private Integer code;
     private String message;
     private T data;
+    
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+    
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    
+    public void setData(T data) {
+        this.data = data;
+    }
     
     private static final int SUCCESS_CODE = 200;
     private static final int ERROR_CODE = 500;
