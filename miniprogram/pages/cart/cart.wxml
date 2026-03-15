@@ -2,7 +2,7 @@
 <view class="container">
   <!-- 空状态 -->
   <view class="empty-cart">
-    <image class="cart-icon" src="/images/icons/cart-empty.png" mode="aspectFit" />
+    <image class="cart-icon" src="https://picsum.photos/600/600?random=40" mode="aspectFit" />
     <text class="empty-text">购物车没有订单哟</text>
     
     <view class="action-buttons">

@@ -11,7 +11,7 @@
     <!-- 水晶周边 -->
     <view class="category-item" bindtap="goToCategory" data-id="crystal">
       <view class="category-left">
-        <image class="category-icon" src="/images/icons/crystal.png" mode="aspectFit" />
+        <image class="category-icon" src="https://picsum.photos/100/100?random=20" mode="aspectFit" />
         <view class="category-info">
           <text class="category-title">水晶周边</text>
           <text class="category-count">1 个商品</text>
@@ -23,7 +23,7 @@
     <!-- 随购小物 -->
     <view class="category-item" bindtap="goToCategory" data-id="accessories">
       <view class="category-left">
-        <image class="category-image" src="/images/categories/accessories.jpg" mode="aspectFill" />
+        <image class="category-image" src="https://picsum.photos/100/100?random=21" mode="aspectFill" />
         <view class="category-info">
           <text class="category-title">随购小物</text>
           <text class="category-count">0 个商品</text>
@@ -35,7 +35,7 @@
     <!-- 相关服务 -->
     <view class="category-item" bindtap="goToCategory" data-id="service">
       <view class="category-left">
-        <image class="category-image" src="/images/categories/service.jpg" mode="aspectFill" />
+        <image class="category-image" src="https://picsum.photos/100/100?random=22" mode="aspectFill" />
         <view class="category-info">
           <text class="category-title">相关服务</text>
           <text class="category-count">1 个商品</text>
@@ -47,7 +47,7 @@
     <!-- 差价补齐 -->
     <view class="category-item" bindtap="goToCategory" data-id="diff">
       <view class="category-left">
-        <image class="category-icon" src="/images/icons/diff.png" mode="aspectFit" />
+        <image class="category-icon" src="https://picsum.photos/100/100?random=23" mode="aspectFit" />
         <view class="category-info">
           <text class="category-title">差价补齐</text>
           <text class="category-count">2 个商品</text>

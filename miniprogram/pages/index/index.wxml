@@ -2,7 +2,7 @@
 <scroll-view scroll-y class="container">
   <!-- 品牌 Logo -->
   <view class="brand-section">
-    <image class="brand-logo" src="/images/brand/logo.png" mode="aspectFit" />
+    <image class="brand-logo" src="https://picsum.photos/300/300?random=1" mode="aspectFit" />
     <text class="brand-name">养个石头</text>
     <text class="brand-slogan">只做天然珠宝</text>
   </view>
@@ -10,12 +10,12 @@
   <!-- 快捷入口 -->
   <view class="quick-entry">
     <view class="entry-item" bindtap="goToCustom">
-      <image class="entry-icon" src="/images/icons/custom-entry.png" mode="aspectFit" />
+      <image class="entry-icon" src="https://picsum.photos/200/200?random=2" mode="aspectFit" />
       <text class="entry-title">DIY-CUSTOM</text>
       <text class="entry-subtitle">设计手串</text>
     </view>
     <view class="entry-item" bindtap="goToGoods">
-      <image class="entry-icon" src="/images/icons/goods-entry.png" mode="aspectFit" />
+      <image class="entry-icon" src="https://picsum.photos/200/200?random=3" mode="aspectFit" />
       <text class="entry-title">MUST-HAVE</text>
       <text class="entry-subtitle">好物</text>
     </view>
@@ -23,7 +23,7 @@
 
   <!-- 客服广告横幅 -->
   <view class="banner" bindtap="contactService">
-    <image class="banner-image" src="/images/banner/service.jpg" mode="aspectFill" />
+    <image class="banner-image" src="https://picsum.photos/800/400?random=4" mode="aspectFill" />
   </view>
 
   <!-- 设计广场 -->
