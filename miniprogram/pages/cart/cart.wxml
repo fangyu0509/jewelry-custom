@@ -1,4 +1,24 @@
 <!--pages/cart/cart.wxml-->
 <view class="container">
-  <text class="placeholder">购物车页面 - 功能开发中</text>
+  <!-- 空状态 -->
+  <view class="empty-cart">
+    <image class="cart-icon" src="/images/icons/cart-empty.png" mode="aspectFit" />
+    <text class="empty-text">购物车没有订单哟</text>
+    
+    <view class="action-buttons">
+      <button class="btn-custom" bindtap="goToCustom">去定制</button>
+      <button class="btn-goods" bindtap="goToGoods">找好物</button>
+    </view>
+  </view>
+  
+  <!-- 底部结算栏 -->
+  <view class="checkout-bar">
+    <view class="total">
+      <text class="total-label">合计：</text>
+      <text class="total-price">¥{{totalPrice}}</text>
+    </view>
+    <view class="checkout-btn" bindtap="checkout">
+      去结算 ({{cartCount}}件)
+    </view>
+  </view>
 </view>
