@@ -7,17 +7,17 @@
       <text class="page-title">养个石头</text>
     </view>
     <view class="header-right">
-      <button class="notice-btn" bindtap="showNotice">
+      <view class="notice-tag">
         <text class="notice-icon">ⓘ</text>
         <text>使用须知</text>
-      </button>
-      <view class="size-info">
+      </view>
+      <view class="size-tag">
         <text class="size-label">手围</text>
         <text class="size-value">{{handSize}}</text>
       </view>
-      <view class="price-info">
+      <view class="price-tag">
         <text class="price-label">总价格：</text>
-        <text class="price-value">¥{{totalPrice}}</text>
+        <text class="price-value">{{totalPrice}}</text>
       </view>
     </view>
   </view>
