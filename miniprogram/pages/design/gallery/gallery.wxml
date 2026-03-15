@@ -1,0 +1,4 @@
+<!--pages/design/gallery/gallery.wxml-->
+<view class="container">
+  <text class="placeholder">设计广场 - 功能开发中</text>
+</view>

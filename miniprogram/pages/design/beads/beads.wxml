@@ -1,0 +1,4 @@
+<!--pages/design/beads/beads.wxml-->
+<view class="container">
+  <text class="placeholder">选购单珠 - 功能开发中</text>
+</view>

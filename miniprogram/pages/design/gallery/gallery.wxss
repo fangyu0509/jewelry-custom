@@ -1,0 +1,12 @@
+/* pages/design/gallery/gallery.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.placeholder {
+  font-size: 28rpx;
+  color: #999;
+}

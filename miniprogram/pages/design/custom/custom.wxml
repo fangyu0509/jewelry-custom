@@ -1,0 +1,4 @@
+<!--pages/design/custom/custom.wxml-->
+<view class="container">
+  <text class="placeholder">自由定制手串 - 功能开发中</text>
+</view>
