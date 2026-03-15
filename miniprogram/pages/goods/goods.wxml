@@ -1,4 +1,64 @@
 <!--pages/goods/goods.wxml-->
 <view class="container">
-  <text class="placeholder">好物页面 - 功能开发中</text>
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <text class="search-icon">🔍</text>
+    <text class="search-placeholder">搜索产品</text>
+  </view>
+
+  <!-- 分类列表 -->
+  <view class="category-list">
+    <!-- 水晶周边 -->
+    <view class="category-item" bindtap="goToCategory" data-id="crystal">
+      <view class="category-left">
+        <image class="category-icon" src="/images/icons/crystal.png" mode="aspectFit" />
+        <view class="category-info">
+          <text class="category-title">水晶周边</text>
+          <text class="category-count">1 个商品</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+
+    <!-- 随购小物 -->
+    <view class="category-item" bindtap="goToCategory" data-id="accessories">
+      <view class="category-left">
+        <image class="category-image" src="/images/categories/accessories.jpg" mode="aspectFill" />
+        <view class="category-info">
+          <text class="category-title">随购小物</text>
+          <text class="category-count">0 个商品</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+
+    <!-- 相关服务 -->
+    <view class="category-item" bindtap="goToCategory" data-id="service">
+      <view class="category-left">
+        <image class="category-image" src="/images/categories/service.jpg" mode="aspectFill" />
+        <view class="category-info">
+          <text class="category-title">相关服务</text>
+          <text class="category-count">1 个商品</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+
+    <!-- 差价补齐 -->
+    <view class="category-item" bindtap="goToCategory" data-id="diff">
+      <view class="category-left">
+        <image class="category-icon" src="/images/icons/diff.png" mode="aspectFit" />
+        <view class="category-info">
+          <text class="category-title">差价补齐</text>
+          <text class="category-count">2 个商品</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 加载完成提示 -->
+  <view class="load-more">
+    <text class="load-text">已加载全部数据</text>
+  </view>
 </view>

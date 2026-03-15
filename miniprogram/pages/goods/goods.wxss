@@ -1,12 +1,91 @@
 /* pages/goods/goods.wxss */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding-bottom: 20rpx;
 }
 
-.placeholder {
+.search-bar {
+  background: linear-gradient(135deg, #E53935 0%, #D32F2F 100%);
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 16rpx 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.search-icon {
+  font-size: 32rpx;
+  margin-right: 15rpx;
+}
+
+.search-placeholder {
   font-size: 28rpx;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.category-list {
+  background-color: #fff;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.category-icon,
+.category-image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+  border-radius: 8rpx;
+}
+
+.category-image {
+  object-fit: cover;
+}
+
+.category-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 10rpx;
+}
+
+.category-count {
+  font-size: 24rpx;
   color: #999;
+}
+
+.arrow {
+  font-size: 48rpx;
+  color: #ccc;
+}
+
+.load-more {
+  text-align: center;
+  padding: 40rpx 0;
+}
+
+.load-text {
+  font-size: 24rpx;
+  color: #ccc;
 }
