@@ -1,20 +1,22 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/goods/goods",
     "pages/design/design",
+    "pages/cart/cart",
+    "pages/profile/profile",
     "pages/product/product",
-    "pages/order/order",
-    "pages/profile/profile"
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFD700",
-    "navigationBarTitleText": "饰品定制",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "养个石头",
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#FFD700",
+    "selectedColor": "#E53935",
     "backgroundColor": "#ffffff",
     "list": [
       {
@@ -24,20 +26,26 @@
         "selectedIconPath": "images/home-active.png"
       },
       {
+        "pagePath": "pages/goods/goods",
+        "text": "好物",
+        "iconPath": "images/goods.png",
+        "selectedIconPath": "images/goods-active.png"
+      },
+      {
         "pagePath": "pages/design/design",
-        "text": "定制",
+        "text": "DIY",
         "iconPath": "images/design.png",
         "selectedIconPath": "images/design-active.png"
       },
       {
-        "pagePath": "pages/order/order",
-        "text": "订单",
-        "iconPath": "images/order.png",
-        "selectedIconPath": "images/order-active.png"
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart-active.png"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "我的",
+        "text": "个人中心",
         "iconPath": "images/profile.png",
         "selectedIconPath": "images/profile-active.png"
       }

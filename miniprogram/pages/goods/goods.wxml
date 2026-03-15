@@ -1,0 +1,4 @@
+<!--pages/goods/goods.wxml-->
+<view class="container">
+  <text class="placeholder">好物页面 - 功能开发中</text>
+</view>

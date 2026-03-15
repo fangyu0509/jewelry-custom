@@ -1,0 +1,67 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+  <!-- 欢迎头部 -->
+  <view class="header">
+    <text class="welcome">您好！欢迎来到养个石头</text>
+  </view>
+
+  <!-- 我的设计卡片 -->
+  <view class="card design-card" bindtap="goToDesign">
+    <view class="card-content">
+      <text class="card-title">我的设计</text>
+      <text class="card-subtitle">查看已保存的设计记录</text>
+    </view>
+    <text class="arrow">›</text>
+  </view>
+
+  <!-- 功能列表 -->
+  <view class="card-list">
+    <!-- 我的订单 -->
+    <view class="list-item" bindtap="goToOrder">
+      <view class="list-left">
+        <text class="icon cart-icon">🛒</text>
+        <view class="list-text">
+          <text class="list-title">我的订单</text>
+          <text class="list-subtitle">定制记录，购买记录</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+
+    <!-- 收货地址 -->
+    <view class="list-item" bindtap="goToAddress">
+      <view class="list-left">
+        <text class="icon location-icon">📍</text>
+        <view class="list-text">
+          <text class="list-title">收货地址</text>
+          <text class="list-subtitle">完善地址，方便下单</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+
+    <!-- 帮助中心 -->
+    <view class="list-item" bindtap="goToHelp">
+      <view class="list-left">
+        <text class="icon help-icon">🎧</text>
+        <view class="list-text">
+          <text class="list-title">帮助中心</text>
+          <text class="list-subtitle">有什么问题请联系客服处理</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+
+    <!-- 条款和条件 -->
+    <view class="list-item" bindtap="goToTerms">
+      <view class="list-left">
+        <text class="icon terms-icon">📋</text>
+        <view class="list-text">
+          <text class="list-title">条款和条件</text>
+          <text class="list-subtitle">我们的服务</text>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+</view>

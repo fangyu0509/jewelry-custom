@@ -1,0 +1,4 @@
+<!--pages/cart/cart.wxml-->
+<view class="container">
+  <text class="placeholder">购物车页面 - 功能开发中</text>
+</view>
