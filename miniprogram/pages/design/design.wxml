@@ -1,0 +1,46 @@
+<!--pages/design/design.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">专属定制</text>
+    <text class="subtitle">打造你的独一无二的饰品</text>
+  </view>
+
+  <view class="form-section">
+    <view class="form-item">
+      <text class="label">饰品类型</text>
+      <picker mode="selector" range="{{types}}" value="{{typeIndex}}" bindchange="onTypeChange">
+        <view class="picker">{{types[typeIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">材质选择</text>
+      <picker mode="selector" range="{{materials}}" value="{{materialIndex}}" bindchange="onMaterialChange">
+        <view class="picker">{{materials[materialIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">尺寸</text>
+      <input class="input" placeholder="请输入尺寸 (mm)" value="{{size}}" bindinput="onSizeInput" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">定制要求</text>
+      <textarea class="textarea" placeholder="请描述你的定制需求..." value="{{requirement}}" bindinput="onRequirementInput" maxlength="500" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">上传参考图</text>
+      <button class="upload-btn" bindtap="chooseImage">选择图片</button>
+      <image wx:for="{{images}}" wx:key="*this" src="{{item}}" mode="aspectFill" class="preview-image" />
+    </view>
+  </view>
+
+  <view class="price-section">
+    <text class="price-label">预估价格：</text>
+    <text class="price">¥{{estimatedPrice}}</text>
+  </view>
+
+  <button class="submit-btn" bindtap="submitOrder">提交定制</button>
+</view>
