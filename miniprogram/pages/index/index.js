@@ -1,91 +1,52 @@
 // pages/index/index.js
 Page({
   data: {
-    products: [],
-    categories: [],
-    currentCategory: 'all',
-    loading: false,
-    page: 1,
-    hasMore: true
+    products: [
+      { id: 1, name: '菩提菩提', material: '菩提子', description: '守护你平安喜乐', image: '/images/products/p1.jpg' },
+      { id: 2, name: '怒目绿龙', material: 'PVC', description: '', image: '/images/products/p2.jpg' },
+      { id: 3, name: '半点心', material: '银+玉', description: '', image: '/images/products/p3.jpg' },
+      { id: 4, name: '牵牛花', material: '中花', description: '', image: '/images/products/p4.jpg' },
+      { id: 5, name: '彩虹多宝', material: '中花', description: '各种石头混搭超美', image: '/images/products/p5.jpg' },
+      { id: 6, name: '苔间樱落', material: '', description: '守护你无忧无虑', image: '/images/products/p6.jpg' },
+      { id: 7, name: '黑莓', material: '', description: '守护你无忧无虑', image: '/images/products/p7.jpg' },
+      { id: 8, name: '来财', material: '', description: '守护你无忧虑', image: '/images/products/p8.jpg' },
+      { id: 9, name: '树莓', material: '', description: '守护你无忧无虑', image: '/images/products/p9.jpg' }
+    ]
   },
 
-  onLoad() {
-    this.loadCategories();
-    this.loadProducts();
+  goToCustom() {
+    wx.navigateTo({
+      url: '/pages/design/custom/custom'
+    });
   },
 
-  onPullDownRefresh() {
-    this.setData({ page: 1, hasMore: true, products: [] });
-    this.loadProducts();
+  goToGoods() {
+    wx.switchTab({
+      url: '/pages/goods/goods'
+    });
   },
 
-  onReachBottom() {
-    if (this.data.hasMore && !this.data.loading) {
-      this.loadProducts();
-    }
+  contactService() {
+    wx.showToast({
+      title: '功能开发中',
+      icon: 'none'
+    });
   },
 
-  // 加载分类
-  async loadCategories() {
-    try {
-      const res = await wx.request({
-        url: 'https://your-domain.com/api/product/categories',
-        method: 'GET'
-      });
-      if (res.data.code === 200) {
-        this.setData({ 
-          categories: [{ id: 'all', name: '全部' }, ...res.data.data] 
-        });
-      }
-    } catch (err) {
-      console.error('加载分类失败', err);
-    }
+  goToPlaza() {
+    wx.navigateTo({
+      url: '/pages/design/gallery/gallery'
+    });
   },
 
-  // 加载产品列表
-  async loadProducts() {
-    if (this.data.loading) return;
-    
-    this.setData({ loading: true });
-    
-    try {
-      const { currentCategory, page } = this.data;
-      const categoryParam = currentCategory === 'all' ? '' : `&category=${currentCategory}`;
-      
-      const res = await wx.request({
-        url: `https://your-domain.com/api/product/list?page=${page}&size=10${categoryParam}`,
-        method: 'GET'
-      });
-      
-      if (res.data.code === 200) {
-        const newProducts = res.data.data;
-        this.setData({
-          products: page === 1 ? newProducts : [...this.data.products, ...newProducts],
-          page: page + 1,
-          hasMore: newProducts.length === 10
-        });
-      }
-    } catch (err) {
-      console.error('加载产品失败', err);
-      wx.showToast({ title: '加载失败', icon: 'none' });
-    } finally {
-      this.setData({ loading: false });
-      wx.stopPullDownRefresh();
-    }
-  },
-
-  // 切换分类
-  onCategoryChange(e) {
-    const category = e.currentTarget.dataset.category;
-    this.setData({ currentCategory: category, page: 1, hasMore: true, products: [] });
-    this.loadProducts();
-  },
-
-  // 跳转产品详情
-  onProductTap(e) {
+  goToProduct(e) {
     const productId = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: `/pages/product/product?id=${productId}`
     });
+  },
+
+  onLoad() {
+    
   }
 });
