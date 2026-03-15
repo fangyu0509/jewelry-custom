@@ -1,4 +1,71 @@
 <!--pages/design/custom/custom.wxml-->
 <view class="container">
-  <text class="placeholder">自由定制手串 - 功能开发中</text>
+  <!-- 顶部导航 -->
+  <view class="header">
+    <view class="header-left">
+      <text class="back-btn" bindtap="goBack">‹</text>
+      <text class="page-title">养个石头</text>
+    </view>
+    <view class="header-right">
+      <button class="notice-btn" bindtap="showNotice">
+        <text class="notice-icon">ⓘ</text>
+        <text>使用须知</text>
+      </button>
+      <view class="size-info">
+        <text class="size-label">手围</text>
+        <text class="size-value">{{handSize}}</text>
+      </view>
+      <view class="price-info">
+        <text class="price-label">总价格：</text>
+        <text class="price-value">¥{{totalPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 手串预览区域 -->
+  <view class="preview-area">
+    <view class="preview-circle">
+      <image class="preview-logo" src="https://picsum.photos/400/400?random=50" mode="aspectFit" />
+    </view>
+  </view>
+
+  <!-- 底部选珠区域 -->
+  <view class="beads-panel">
+    <!-- 工具栏 -->
+    <view class="panel-toolbar">
+      <button class="clear-btn" bindtap="clearAll">
+        <text>🗑</text>
+      </button>
+      <button class="select-btn" bindtap="showBeadsSelector">
+        <text>🛒</text>
+        <text>选选珠子</text>
+      </button>
+    </view>
+
+    <!-- 搜索框 -->
+    <view class="search-box">
+      <text class="search-icon">🔍</text>
+      <input class="search-input" placeholder="白水晶/玛瑙/..." value="{{searchKeyword}}" bindinput="onSearchInput" />
+    </view>
+
+    <!-- 分类和珠子列表 -->
+    <view class="beads-content">
+      <!-- 左侧分类 -->
+      <scroll-view scroll-y class="category-sidebar">
+        <view class="category-item {{currentCategory === item.id ? 'active' : ''}}" wx:for="{{categories}}" wx:key="id" bindtap="selectCategory" data-id="{{item.id}}">
+          <text>{{item.name}}</text>
+        </view>
+      </scroll-view>
+
+      <!-- 右侧珠子网格 -->
+      <scroll-view scroll-y class="beads-grid">
+        <view class="beads-item" wx:for="{{beadsList}}" wx:key="id" bindtap="addBeads" data-item="{{item}}">
+          <image class="beads-image" src="{{item.image}}" mode="aspectFill" />
+          <text class="beads-name">{{item.name}}</text>
+          <text class="beads-spec">{{item.spec}}</text>
+          <text class="beads-price">¥ {{item.price}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
 </view>

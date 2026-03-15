@@ -1,4 +1,4 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "自由定制手串"
+  "navigationStyle": "custom"
 }
